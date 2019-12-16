@@ -2,14 +2,18 @@ import React, { Component } from "react";
 
 import './app.scss';
 
-class App extends Component {
+export default class App extends Component {
+
+    buttonClick() {
+        console.log('test click');
+    }
+
     render() {
         return (
-            <div>
+            <div className="app">
                 <h1>Hello world!</h1>
+                <button type='button' onClick={ this.buttonClick }>Test input click</button>
             </div>
         );
     }
 }
-
-export default App;

@@ -7,3 +7,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid steelblue;
+  padding: 10px 15px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
