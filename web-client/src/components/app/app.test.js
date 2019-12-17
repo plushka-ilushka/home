@@ -7,8 +7,6 @@ configure({ adapter: new Adapter() });
 
 describe('App Component', () => {
   it('check App input', () => {
-    const appComponent = shallow(<App />);
-    const input = appComponent.find("button[type='button']");
-    input.simulate('click');
+    expect(mount(<App />)).toMatchSnapshot();
   });
 });
