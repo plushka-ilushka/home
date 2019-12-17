@@ -7,8 +7,8 @@ configure({adapter: new Adapter() });
  
 describe('App Component', () => {
     it("check App input", () => {
-        const AppComponent = shallow(<App />),
-            Input = AppComponent.find("button[type='button']");
-        Input.simulate("click");
+        const appComponent = shallow(<App />),
+            input = appComponent.find("button[type='button']");
+        input.simulate("click");
     });
   })

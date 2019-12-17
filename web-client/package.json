@@ -10,14 +10,13 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>./test.config.js"
+    }
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "enzyme-adapter-react-16": "^1.15.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-test-renderer": "^16.12.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
@@ -29,14 +28,19 @@
     "babel-plugin-styled-components": "^1.10.6",
     "css-loader": "^3.3.2",
     "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
     "html-webpack-plugin": "^3.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "node-sass": "^4.13.0",
+    "react": "^16.12.0",
     "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.12.0",
     "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
     "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",

@@ -12,7 +12,8 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ["babel-loader", "source-map-loader"],
+        enforce: "pre"
       },
       {
         test: /\.s[ac]ss$/i,
@@ -24,9 +25,9 @@ module.exports = {
       },
     ]
   },
+  devtool: false,
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html"
-    })
+    new HtmlWebpackPlugin( {template: "./src/index.html"} ),
+    //new webpack.SourceMapDevToolPlugin()
   ]
 };
