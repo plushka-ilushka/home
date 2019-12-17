@@ -7,8 +7,10 @@ configure({adapter: new Adapter() });
  
 describe('App Component', () => {
     it("check App input", () => {
-        const appComponent = shallow(<App />),
-            input = appComponent.find("button[type='button']");
-        input.simulate("click");
+        const appComponent = shallow(<App />);
+        const buttons = jest.fn();
+        buttons();
+        const input = appComponent.find("button[type='button']").simulate("click");
+        expect(buttons).toBeCalled();
     });
   })

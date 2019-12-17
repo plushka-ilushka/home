@@ -11,11 +11,6 @@
     "test:coverage": "jest --coverage"
   },
   "snapshotSerializers": [ "enzyme-to-json/serializer" ],
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|scss)$": "<rootDir>./styleMock.js"
-    }
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
