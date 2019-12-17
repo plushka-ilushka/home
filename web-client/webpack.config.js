@@ -25,9 +25,8 @@ module.exports = {
       },
     ]
   },
-  devtool: false,
+  devtool: "source-map",
   plugins: [
-    new HtmlWebpackPlugin( {template: "./src/index.html"} ),
-    //new webpack.SourceMapDevToolPlugin()
+    new HtmlWebpackPlugin( {template: "./src/index.html"} )
   ]
 };
