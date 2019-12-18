@@ -22,6 +22,5 @@ module.exports = {
   plugins: [
     'react',
   ],
-  rules: {
-  },
+  rules: { 'import/no-extraneous-dependencies': [ 'error', { devDependencies: [ '**/*.test.js', '**/*.test.jsx', '**/*.spec.js', '**/*.spec.jsx', 'test.setup.js', 'webpack.config.js', ] } ], },
 };
