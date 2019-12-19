@@ -1,0 +1,22 @@
+$tealish: #29b1cc;
+
+.button {
+    font-weight: bold; 
+    border-radius: 20px;
+    width: 160px;
+    height: 40px;
+    outline: none;
+}
+
+.blue-outline {
+    border: solid 2px $tealish;
+    background-color: rgba(255, 255, 255, 0);
+    color: $tealish;
+  }
+
+  .base {
+    box-shadow: 0 10px 20px 0 rgba(41, 177, 204, 0.3);
+    background-color: $tealish;
+    border: none;
+    color: #fff;
+  }
