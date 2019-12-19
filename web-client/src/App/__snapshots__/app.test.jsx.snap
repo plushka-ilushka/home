@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component check App input 1`] = `
+<App>
+  <div>
+    <PaintedButton
+      caption="Register"
+      type="button"
+    >
+      <button
+        className="painted-button"
+        type="button"
+      >
+        Register
+      </button>
+    </PaintedButton>
+    <NoPaintedButton
+      caption="Login"
+      type="button"
+    >
+      <button
+        className="no-painted-button"
+        type="button"
+      >
+        Login
+      </button>
+    </NoPaintedButton>
+  </div>
+</App>
+`;

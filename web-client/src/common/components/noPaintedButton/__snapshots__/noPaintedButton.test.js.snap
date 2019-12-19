@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoPaintedButton Component NoPaintedButton Snapshot 1`] = `
+<NoPaintedButton
+  type="button"
+>
+  <button
+    className="no-painted-button"
+    type="button"
+  />
+</NoPaintedButton>
+`;
