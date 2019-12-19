@@ -1,0 +1,7 @@
+@import "./src/assets/main.scss";
+
+.no-painted-button {
+  background: none;
+  color: $CYAN_COLOR;
+  @extend %button;
+}
