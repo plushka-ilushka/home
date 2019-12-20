@@ -1,0 +1,32 @@
+@import "./src/assets/main.scss";
+
+.check-box {
+  object-fit: contain;
+  display: none;
+  @extend %label-text;
+}
+
+.labels i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $COLOR_GRAY;
+  border-radius: 3px;
+  position: relative;
+}
+
+.labels i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $COLOR_GRAY;
+  width: 18px;
+  height: 18px;
+  transform: scale(0);
+  transition: .3s;
+}
+
+.check-box:checked ~ i::before {
+  transform: scale(1);
+}

@@ -8,8 +8,7 @@ module.exports = {
     filename: 'index-bundle.js',
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'source-map-loader'],
@@ -24,10 +23,13 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.svg$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+            },
           },
         ],
       },
@@ -35,7 +37,9 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html'
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
