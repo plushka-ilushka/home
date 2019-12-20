@@ -1,0 +1,65 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.test.jsx",
+          "**/*.spec.js",
+          "**/*.spec.jsx",
+          "test.setup.js",
+          "webpack.config.js"
+        ]
+    }],
+    "class-methods-use-this": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react/destructuring-assignment": "warn",
+    "react/no-did-update-set-state": "off",
+    "import/named": "error",
+    "react/no-danger": "error",
+    "react/no-string-refs": "error",
+    "react/prop-types": "warn",
+    "react/no-unsafe": ["warn", { "checkAliases": true }],
+    "react/no-typos": "error",
+    "react/require-default-props": "warn",
+    "import/prefer-default-export": "warn",
+    "import/no-anonymous-default-export": ["warn", {
+      "allowArray": false,
+      "allowArrowFunction": false,
+      "allowAnonymousClass": false,
+      "allowAnonymousFunction": false,
+      "allowCallExpression": false,
+      "allowLiteral": false,
+      "allowObject": false
+    }],
+    "no-console": "error",
+    "func-names": "error",
+    "no-shadow": "warn",
+    "max-len": "warn"
+  }
+}
