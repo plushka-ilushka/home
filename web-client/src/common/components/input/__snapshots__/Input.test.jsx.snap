@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component Input Snaphot 1`] = `
+<Input
+  id=""
+  name=""
+  placeholder=""
+>
+  <label
+    className="label"
+    htmlFor=""
+  >
+    <input
+      className="input"
+      id=""
+      name=""
+      placeholder=""
+    />
+  </label>
+</Input>
+`;

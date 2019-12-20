@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component check App input 1`] = `
+<App>
+  <div>
+    <Input
+      htmlFor="Email"
+      id=""
+      label="Email"
+      name="Email"
+      placeholder="email"
+      title="Email"
+    >
+      <label
+        className="label"
+        htmlFor="Email"
+      >
+        Email
+        <input
+          className="input"
+          htmlFor="Email"
+          id=""
+          label="Email"
+          name="Email"
+          placeholder="email"
+        />
+      </label>
+    </Input>
+    <Input
+      htmlFor="password"
+      id=""
+      label="password"
+      name="password"
+      placeholder=""
+      title="Password"
+      type="password"
+    >
+      <label
+        className="label"
+        htmlFor="password"
+      >
+        Password
+        <input
+          className="input"
+          htmlFor="password"
+          id=""
+          label="password"
+          name="password"
+          placeholder=""
+          type="password"
+        />
+      </label>
+    </Input>
+  </div>
+</App>
+`;
