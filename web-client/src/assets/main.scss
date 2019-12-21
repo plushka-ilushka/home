@@ -1,0 +1,18 @@
+//COLORS
+$CYAN_COLOR: #29b1cc;
+$WHITE_COLOR: #fff;
+
+$FONT_FAMILY: SourceSansPro;
+$BORDER_BUTTON: solid 2px $CYAN_COLOR;
+
+//BUTTON
+
+%button {
+  font-weight: bold;
+  border-radius: 20px;
+  width: 160px;
+  height: 40px;
+  outline: none;
+  border: $BORDER_BUTTON;
+  cursor: pointer;
+}
