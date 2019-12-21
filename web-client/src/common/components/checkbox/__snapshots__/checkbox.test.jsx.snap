@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Component Checkbox Snapshot 1`] = `
+<Checkbox
+  id=""
+  name=""
+  title=""
+  type="checkbox"
+>
+  <label
+    className="labels i"
+    htmlFor=""
+  >
+    <input
+      className="check-box"
+      id=""
+      name=""
+      type="checkbox"
+    />
+    <i />
+  </label>
+</Checkbox>
+`;
