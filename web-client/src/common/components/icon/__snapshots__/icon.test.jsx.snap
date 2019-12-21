@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon Component Icon Snapshot 1`] = `
+<Icon
+  className=""
+  glyph=""
+  viewBox=""
+>
+  <svg
+    className="shape"
+    viewBox=""
+  >
+    <use
+      xlinkHref="#"
+    />
+  </svg>
+</Icon>
+`;
