@@ -36,6 +36,7 @@
           "webpack.config.js"
         ]
     }],
+    "react/jsx-props-no-spreading": "off",
     "class-methods-use-this": "off",
     "react-hooks/rules-of-hooks": "error",
     "react/destructuring-assignment": "warn",

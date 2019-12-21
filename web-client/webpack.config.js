@@ -8,26 +8,38 @@ module.exports = {
     filename: 'index-bundle.js',
   },
   module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader', 'source-map-loader'],
-        enforce: 'pre',
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
-      },
+    rules: [{
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: ['babel-loader', 'source-map-loader'],
+      enforce: 'pre',
+    },
+    {
+      test: /\.s[ac]ss$/i,
+      use: [
+        'style-loader',
+        'css-loader',
+        'sass-loader',
+      ],
+    },
+    {
+      test: /\.(png|jpg|gif|svg)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 10000,
+          },
+        },
+      ],
+    },
     ],
   },
   devtool: 'source-map',
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
