@@ -23,7 +23,7 @@ export default function Input(props) {
         id={name}
         name={name}
         type={type}
-        value={value}
+        defaultValue={value}
         placeholder={placeholder}
         {...setProps}
       />
@@ -39,6 +39,7 @@ Input.propTypes = {
   value: PropTypes.string,
   placeholder: PropTypes.string,
   title: PropTypes.string,
+  defaultValue: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -49,4 +50,5 @@ Input.defaultProps = {
   placeholder: '',
   title: '',
   value: '',
+  defaultValue: '',
 };
