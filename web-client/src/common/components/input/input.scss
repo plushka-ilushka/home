@@ -1,0 +1,17 @@
+@import "./src/assets/main.scss";
+
+.input {
+  width: 350px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #dfe2e6;
+  background-color: $WHITE_COLOR;
+  outline: none;
+}
+
+.label {
+  @extend %label-text;
+  display: flex;
+  flex-direction: column;
+}
