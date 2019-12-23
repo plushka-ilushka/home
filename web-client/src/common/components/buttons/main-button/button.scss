@@ -1,13 +1,7 @@
-//COLORS
-$CYAN_COLOR: #29b1cc;
-$WHITE_COLOR: #fff;
+@import "./src/assets/colors.scss";
+@import "./src/assets/fonts.scss";
 
-$FONT_FAMILY: SourceSansPro;
-$BORDER_BUTTON: solid 2px $CYAN_COLOR;
-
-//BUTTON
-
-%button {
+.button {
   font-weight: bold;
   border-radius: 20px;
   width: 160px;

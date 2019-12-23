@@ -1,40 +1,43 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import classNames from 'classnames';
 
-import './noPaintedButton.scss';
+import './button.scss';
 
-export default function NoPaintedButton(props) {
+export default function Button(props) {
 
     const {
         className,
         type,
         onClick,
         caption,
-        ...setProps
+        ...restProps
     } = props;
 
     return (
         <button
-            className={ classNames("no-painted-button", className) }
+            className={classNames("button", className)}
             type={type}
             onClick={onClick}
-            {...setProps}
+            {...restProps}
         >
             {caption}
         </button>
     );
 };
 
-NoPaintedButton.propTypes = {
+Button.propTypes = {
     className: PropTypes.string,
     type: PropTypes.string,
     onClick: PropTypes.bool,
     caption: PropTypes.string
 };
 
-NoPaintedButton.defaultProps = {
+Button.defaultProps = {
     type: "button",
     className: undefined,
     caption: undefined
 };
+
+
+

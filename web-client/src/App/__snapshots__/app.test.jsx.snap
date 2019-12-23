@@ -3,28 +3,39 @@
 exports[`App Component check App input 1`] = `
 <App>
   <div>
-    <PaintedButton
+    <PrimaryButton
       caption="Register"
       type="button"
     >
-      <button
-        className="painted-button"
+      <Button
+        className="primary-button"
         type="button"
       >
-        Register
-      </button>
-    </PaintedButton>
-    <NoPaintedButton
+        <button
+          className="button primary-button"
+          type="button"
+        />
+      </Button>
+    </PrimaryButton>
+    <SecondaryButton
       caption="Login"
       type="button"
     >
-      <button
-        className="no-painted-button"
+      <PrimaryButton
+        className="secondary-button"
         type="button"
       >
-        Login
-      </button>
-    </NoPaintedButton>
+        <Button
+          className="primary-button secondary-button"
+          type="button"
+        >
+          <button
+            className="button primary-button secondary-button"
+            type="button"
+          />
+        </Button>
+      </PrimaryButton>
+    </SecondaryButton>
   </div>
 </App>
 `;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import PaintedButton from '../common/components/PaintedButton';
-import NoPaintedButton from '../common/components/NoPaintedButton';
+import PrimaryButton from '../common/components/buttons/primary-button';
+import SecondaryButton from '../common/components/buttons/secondary-button';
 
 import './app.scss';
 
@@ -10,8 +10,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <PaintedButton caption="Register" />
-        <NoPaintedButton caption="Login" />
+        <PrimaryButton caption="Register" />
+        <SecondaryButton caption="Login" />
       </div>
     );
   }
