@@ -9,7 +9,7 @@
     "build": "webpack --mode production",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint --ext .js,.jsx"
+    "lint": "eslint './src/**/*.js*'"
   },
   "author": "",
   "license": "ISC",
