@@ -1,12 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NoPaintedButton Component NoPaintedButton Snapshot 1`] = `
-<SecondaryButton
-  type="button"
->
+<SecondaryButton>
   <PrimaryButton
     className="secondary-button"
-    type="button"
   >
     <Button
       className="primary-button secondary-button"
