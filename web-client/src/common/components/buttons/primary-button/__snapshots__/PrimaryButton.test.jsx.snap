@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaintedButton Component PaintedButton Snapshot 1`] = `
+<PrimaryButton>
+  <Button
+    className="primary-button"
+    type="button"
+  >
+    <button
+      className="button primary-button"
+      type="button"
+    />
+  </Button>
+</PrimaryButton>
+`;

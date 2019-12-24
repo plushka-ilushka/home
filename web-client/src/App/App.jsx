@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import Input from '../common/components/input';
+import Image from '../common/components/image';
 
 import './app.scss';
 
-export default class App extends Component {
-
-  render() {
-    return (
-      <div>
-        <Input name = "E - mail"/>
-        <Input name = "Password"/>
-      </div>
-    );
-  }
+export default function App() {
+  return (
+    <div>
+      <Image src="f" alt="f" />
+    </div>
+  );
 }

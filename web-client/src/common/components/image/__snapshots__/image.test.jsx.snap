@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image Component Image Snapshot 1`] = `
+<Image
+  alt="f"
+  src="f"
+>
+  <img
+    alt="f"
+    src="f"
+  />
+</Image>
+`;

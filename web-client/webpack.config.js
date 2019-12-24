@@ -8,31 +8,37 @@ module.exports = {
     filename: 'index-bundle.js',
   },
   module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      use: ['babel-loader', 'source-map-loader'],
-      enforce: 'pre',
-    },
-    {
-      test: /\.s[ac]ss$/i,
-      use: [
-        'style-loader',
-        'css-loader',
-        'sass-loader',
-      ],
-    },
-    {
-      test: /\.svg$/,
-      use: [
-        {
-          loader: 'svg-url-loader',
-          options: {
-            limit: 10000,
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader', 'source-map-loader'],
+        enforce: 'pre',
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        query: {},
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+            },
           },
-        },
-      ],
-    },
+        ],
+      },
     ],
   },
   devtool: 'source-map',
