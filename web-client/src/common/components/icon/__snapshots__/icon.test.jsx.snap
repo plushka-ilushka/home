@@ -7,7 +7,7 @@ exports[`Icon Component Icon Snapshot 1`] = `
   viewBox=""
 >
   <svg
-    className="shape"
+    className="icon"
     viewBox=""
   >
     <use

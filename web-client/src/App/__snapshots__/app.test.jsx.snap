@@ -3,39 +3,20 @@
 exports[`App Component check App input 1`] = `
 <App>
   <div>
-    <PrimaryButton
-      caption="Register"
-      type="button"
+    <Icon
+      className=""
+      glyph=""
+      viewBox=""
     >
-      <Button
-        className="primary-button"
-        type="button"
+      <svg
+        className="icon"
+        viewBox=""
       >
-        <button
-          className="button primary-button"
-          type="button"
+        <use
+          xlinkHref="#"
         />
-      </Button>
-    </PrimaryButton>
-    <SecondaryButton
-      caption="Login"
-      type="button"
-    >
-      <PrimaryButton
-        className="secondary-button"
-        type="button"
-      >
-        <Button
-          className="primary-button secondary-button"
-          type="button"
-        >
-          <button
-            className="button primary-button secondary-button"
-            type="button"
-          />
-        </Button>
-      </PrimaryButton>
-    </SecondaryButton>
+      </svg>
+    </Icon>
   </div>
 </App>
 `;
