@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component Input Snaphot 1`] = `
+<Input
+  type="text"
+>
+  <input
+    className="input"
+    type="text"
+  />
+</Input>
+`;
