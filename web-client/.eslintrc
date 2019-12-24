@@ -62,6 +62,7 @@
     "func-names": "error",
     "no-shadow": "warn",
     "max-len": "warn",
-    "react/button-has-type": "off"
+    "react/button-has-type": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   }
 }

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label Component Label Snaphot 1`] = `
+<Label
+  className="a"
+>
+  <label
+    className="label a"
+  >
+    children
+  </label>
+</Label>
+`;

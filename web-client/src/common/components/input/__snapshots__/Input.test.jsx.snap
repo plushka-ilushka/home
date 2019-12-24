@@ -2,20 +2,11 @@
 
 exports[`Input Component Input Snaphot 1`] = `
 <Input
-  id=""
-  name=""
-  placeholder=""
+  type="text"
 >
-  <label
-    className="label"
-    htmlFor=""
-  >
-    <input
-      className="input"
-      id=""
-      name=""
-      placeholder=""
-    />
-  </label>
+  <input
+    className="input"
+    type="text"
+  />
 </Input>
 `;
