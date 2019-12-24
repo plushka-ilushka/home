@@ -14,12 +14,10 @@ export default function Input(props) {
         value,
         handleChange,
         placeholder,
-        ...setProps
+        ...restProps
     } = props;
 
     return (
-        <label className={classNames("label", className)} htmlFor={name}>
-            {title}
             <input
                 className={classNames("input", className)}
                 id={name}
@@ -28,9 +26,8 @@ export default function Input(props) {
                 value={value}
                 onChange={handleChange}
                 placeholder={placeholder}
-                {...setProps}
+                {...restProps}
             />
-        </label>
     );
 };
 
@@ -47,7 +44,6 @@ Input.propTypes = {
 Input.defaultProps = {
     type: "text",
     className: undefined,
-    id: "",
     name: "",
     type: undefined,
     placeholder: ""

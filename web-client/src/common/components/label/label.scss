@@ -1,0 +1,15 @@
+@import "./src/assets/colors.scss";
+@import "./src/assets/fonts.scss";
+
+.label {
+    width: 79px;
+    height: 15px;
+    font-family: $FONT_FAMILY;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $BLACK_COLOR;
+}

@@ -9,8 +9,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Input name="Email" label="Email" htmlFor="Email" title="Email" placeholder="email" />
-        <Input type="password" name="password" label="password" htmlFor="password" title="Password" />
+        <Input name = "E - mail"/>
+        <Input name = "Password"/>
       </div>
     );
   }
