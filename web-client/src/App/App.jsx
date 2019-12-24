@@ -1,15 +1,13 @@
 import React from 'react';
 
-import Icon from '../common/components/icon';
-
-import shape from '../assets/icons/shape.svg';
+import Image from '../common/components/image';
 
 import './app.scss';
 
 export default function App() {
   return (
     <div>
-      <Icon glyph={shape.id} viewBox={shape.viewBox} />
+      <Image src="f" alt="f" />
     </div>
   );
 }
