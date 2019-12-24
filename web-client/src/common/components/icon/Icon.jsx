@@ -9,7 +9,7 @@ export default function Icon({
 }) {
   return (
     <svg
-      className={classNames('shape', className)}
+      className={classNames('icon', className)}
       viewBox={viewBox}
       {...props}
     >
