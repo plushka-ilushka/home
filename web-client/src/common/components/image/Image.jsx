@@ -21,12 +21,10 @@ export default function Image(props) {
 
 Image.propTypes = {
   className: PropTypes.string,
-  src: PropTypes.string,
-  alt: PropTypes.string,
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
 };
 
 Image.defaultProps = {
   className: undefined,
-  src: '',
-  alt: '',
 };
