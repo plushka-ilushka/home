@@ -1,0 +1,12 @@
+@import "./src/assets/colors.scss";
+@import "./src/assets/fonts.scss";
+
+.button {
+  font-weight: bold;
+  border-radius: 20px;
+  width: 160px;
+  height: 40px;
+  outline: none;
+  border: 2px solid $CYAN;
+  cursor: pointer;
+}
