@@ -2,48 +2,61 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import Input from '../input/Input';
+import Icon from '../icon/Icon';
+import Label from '../label/Label';
+
 import './checkbox.scss';
 
 export default function Checkbox(props) {
   const {
-    title,
+    caption,
     className,
     name,
-    type,
     onClick,
-    ...setProps
+    type,
+    glyph,
+    viewBox,
+    ...restProps
   } = props;
 
+
   return (
-    <label className={classNames('labels i', className)} htmlFor={name}>
-      {title}
-      <input
-        className={classNames('check-box', className)}
-        id={name}
-        name={name}
-        type={type}
-        onClick={onClick}
-        {...setProps}
-      />
-      <i />
-    </label>
+    <div>
+      <Label
+        htmlFor={name}
+      >
+        <Input
+          type={type}
+          id={name}
+          name={name}
+          className={classNames('none-input', className)}
+          onClick={onClick}
+          {...restProps}
+        />
+        <Icon glyph={glyph} viewBox={viewBox} />
+        {caption}
+      </Label>
+    </div>
   );
 }
 
 Checkbox.propTypes = {
-  title: PropTypes.string,
   className: PropTypes.string,
-  id: PropTypes.string,
-  name: PropTypes.string,
   type: PropTypes.string,
-  onClick: PropTypes.bool,
+  name: PropTypes.string,
+  caption: PropTypes.string,
+  onClick: PropTypes.func,
+  glyph: PropTypes.string,
+  viewBox: PropTypes.string,
 };
 
 Checkbox.defaultProps = {
-  title: '',
   type: 'checkbox',
   className: undefined,
-  id: '',
-  name: '',
+  name: undefined,
   onClick: undefined,
+  caption: undefined,
+  glyph: undefined,
+  viewBox: undefined,
 };

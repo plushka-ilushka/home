@@ -1,0 +1,8 @@
+@import "./src/assets/colors.scss";
+@import "./src/assets/fonts.scss";
+@import "../main-button/button.scss";
+
+.secondary-button {
+  background: none;
+  color: $CYAN_COLOR;
+}
