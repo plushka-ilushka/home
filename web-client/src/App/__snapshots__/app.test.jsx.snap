@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component check App input 1`] = `
+<App>
+  <div>
+    <Image
+      alt="f"
+      src="f"
+    >
+      <img
+        alt="f"
+        src="f"
+      />
+    </Image>
+  </div>
+</App>
+`;

@@ -7,7 +7,7 @@ import './app.scss';
 export default function App() {
   return (
     <div>
-      <Image />
+      <Image src="f" alt="f" />
     </div>
   );
 }

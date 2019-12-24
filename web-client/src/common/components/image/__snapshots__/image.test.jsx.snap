@@ -2,12 +2,12 @@
 
 exports[`Image Component Image Snapshot 1`] = `
 <Image
-  alt=""
-  src=""
+  alt="f"
+  src="f"
 >
   <img
-    alt=""
-    src=""
+    alt="f"
+    src="f"
   />
 </Image>
 `;

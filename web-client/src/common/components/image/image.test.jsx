@@ -4,6 +4,6 @@ import Image from './Image';
 
 describe('Image Component', () => {
   it('Image Snapshot', () => {
-    expect(mount(<Image />)).toMatchSnapshot();
+    expect(mount(<Image src="f" alt="f" />)).toMatchSnapshot();
   });
 });
