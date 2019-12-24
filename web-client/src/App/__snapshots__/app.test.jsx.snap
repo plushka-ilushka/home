@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component check App input 1`] = `
+<App>
+  <div>
+    <PrimaryButton
+      caption="Register"
+      type="button"
+    >
+      <Button
+        className="primary-button"
+        type="button"
+      >
+        <button
+          className="button primary-button"
+          type="button"
+        />
+      </Button>
+    </PrimaryButton>
+    <SecondaryButton
+      caption="Login"
+      type="button"
+    >
+      <PrimaryButton
+        className="secondary-button"
+        type="button"
+      >
+        <Button
+          className="primary-button secondary-button"
+          type="button"
+        >
+          <button
+            className="button primary-button secondary-button"
+            type="button"
+          />
+        </Button>
+      </PrimaryButton>
+    </SecondaryButton>
+  </div>
+</App>
+`;
