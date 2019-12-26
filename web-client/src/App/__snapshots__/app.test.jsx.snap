@@ -23,7 +23,7 @@ exports[`App Component check App input 1`] = `
           >
             <input
               checked={true}
-              className="checkbox__input"
+              className="input checkbox__input"
               onChange={[Function]}
               type="checkbox"
             />

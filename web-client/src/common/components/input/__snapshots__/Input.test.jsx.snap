@@ -5,6 +5,7 @@ exports[`Input Component Input Snaphot 1`] = `
   type="text"
 >
   <input
+    className="input"
     type="text"
   />
 </Input>

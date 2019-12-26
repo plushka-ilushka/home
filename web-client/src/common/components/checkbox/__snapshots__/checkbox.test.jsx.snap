@@ -15,7 +15,7 @@ exports[`Checkbox Component Checkbox Snapshot 1`] = `
         type="checkbox"
       >
         <input
-          className="checkbox__input"
+          className="input checkbox__input"
           type="checkbox"
         />
       </Input>
