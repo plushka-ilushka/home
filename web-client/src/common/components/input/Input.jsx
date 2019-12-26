@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 import INPUT_TYPES from './constants';
 
@@ -19,7 +20,7 @@ export default function Input(props) {
 
   return (
     <input
-      className={className}
+      className={classNames('input', className)}
       id={name}
       name={name}
       type={type}
