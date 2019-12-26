@@ -3,15 +3,46 @@
 exports[`App Component check App input 1`] = `
 <App>
   <div>
-    <Image
-      alt="f"
-      src="f"
+    <Checkbox
+      caption="Remember me"
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
     >
-      <img
-        alt="f"
-        src="f"
-      />
-    </Image>
+      <Label
+        className="checkbox"
+      >
+        <label
+          className="label checkbox"
+        >
+          <Input
+            checked={true}
+            className="checkbox__input"
+            onChange={[Function]}
+            type="checkbox"
+          >
+            <input
+              checked={true}
+              className="input checkbox__input"
+              onChange={[Function]}
+              type="checkbox"
+            />
+          </Input>
+          <Icon
+            className="checkbox__icon"
+          >
+            <svg
+              className="icon checkbox__icon"
+            >
+              <use
+                xlinkHref="#undefined"
+              />
+            </svg>
+          </Icon>
+          Remember me
+        </label>
+      </Label>
+    </Checkbox>
   </div>
 </App>
 `;

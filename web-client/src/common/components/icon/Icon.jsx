@@ -27,7 +27,7 @@ Icon.propTypes = {
 };
 
 Icon.defaultProps = {
-  className: '',
-  glyph: '',
-  viewBox: '',
+  className: undefined,
+  glyph: undefined,
+  viewBox: undefined,
 };

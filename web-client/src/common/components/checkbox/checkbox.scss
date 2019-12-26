@@ -1,0 +1,14 @@
+@import "./src/assets/colors.scss";
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    display: none;
+  }
+
+  &__icon {
+    padding-right: 5px;
+  }
+}
