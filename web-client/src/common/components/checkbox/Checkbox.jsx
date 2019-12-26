@@ -6,6 +6,8 @@ import Input from '../input/Input';
 import Icon from '../icon/Icon';
 import Label from '../label/Label';
 
+import checkboxIcon from '../../../assets/icons/checkbox.svg';
+
 import './checkbox.scss';
 
 export default function Checkbox(props) {
@@ -15,29 +17,25 @@ export default function Checkbox(props) {
     name,
     onClick,
     type,
-    glyph,
-    viewBox,
     ...restProps
   } = props;
 
-
   return (
-    <div>
-      <Label
-        htmlFor={name}
-      >
-        <Input
-          type={type}
-          id={name}
-          name={name}
-          className={classNames('none-input', className)}
-          onClick={onClick}
-          {...restProps}
-        />
-        <Icon glyph={glyph} viewBox={viewBox} />
-        {caption}
-      </Label>
-    </div>
+    <Label
+      htmlFor={name}
+      className="checkbox"
+    >
+      <Input
+        type={type}
+        id={name}
+        name={name}
+        className={classNames('checkbox__input', className)}
+        onClick={onClick}
+        {...restProps}
+      />
+      <Icon glyph={checkboxIcon.id} viewBox={checkboxIcon.viewBox} className="checkbox__icon" />
+      {caption}
+    </Label>
   );
 }
 
@@ -47,8 +45,6 @@ Checkbox.propTypes = {
   name: PropTypes.string,
   caption: PropTypes.string,
   onClick: PropTypes.func,
-  glyph: PropTypes.string,
-  viewBox: PropTypes.string,
 };
 
 Checkbox.defaultProps = {
@@ -57,6 +53,4 @@ Checkbox.defaultProps = {
   name: undefined,
   onClick: undefined,
   caption: undefined,
-  glyph: undefined,
-  viewBox: undefined,
 };

@@ -1,15 +1,13 @@
 import React from 'react';
 
-import Icon from '../common/components/icon';
-
-import shape from '../assets/icons/shape.svg';
+import Checkbox from '../common/components/checkbox/Checkbox';
 
 import './app.scss';
 
 export default function App() {
   return (
     <div>
-      <Icon glyph={shape.id} viewBox={shape.viewBox} />
+      <Checkbox caption="Remember me" checked onChange={() => {}} />
     </div>
   );
 }
