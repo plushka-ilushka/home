@@ -2,22 +2,35 @@
 
 exports[`Checkbox Component Checkbox Snapshot 1`] = `
 <Checkbox
-  id=""
-  name=""
-  title=""
   type="checkbox"
 >
-  <label
-    className="labels i"
-    htmlFor=""
+  <Label
+    className="checkbox"
   >
-    <input
-      className="check-box"
-      id=""
-      name=""
-      type="checkbox"
-    />
-    <i />
-  </label>
+    <label
+      className="label checkbox"
+    >
+      <Input
+        className="checkbox__input"
+        type="checkbox"
+      >
+        <input
+          className="checkbox__input"
+          type="checkbox"
+        />
+      </Input>
+      <Icon
+        className="checkbox__icon"
+      >
+        <svg
+          className="icon checkbox__icon"
+        >
+          <use
+            xlinkHref="#undefined"
+          />
+        </svg>
+      </Icon>
+    </label>
+  </Label>
 </Checkbox>
 `;

@@ -1,17 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Icon Component Icon Snapshot 1`] = `
-<Icon
-  className=""
-  glyph=""
-  viewBox=""
->
+<Icon>
   <svg
-    className="icon"
-    viewBox=""
+    className="icon icon"
   >
     <use
-      xlinkHref="#"
+      xlinkHref="#undefined"
     />
   </svg>
 </Icon>
