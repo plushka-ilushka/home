@@ -9,7 +9,13 @@
     "build": "webpack --mode production",
     "test:watch": "jest --watch --config jest.config.js",
     "test:coverage": "jest --coverage --config jest.config.js",
-    "lint": "eslint ./ --fix"
+    "lint": "eslint ./ --fix",
+    "env:buildServer": "mvn clean install -f ../api",
+    "env:buildDocker": "docker-compose -f ../docker-compose.yml build",
+    "env:up": "docker-compose -f ../docker-compose.yml up -d",
+    "env:down": "docker-compose -f ../docker-compose.yml down -v",
+    "env:start": "docker-compose -f ../docker-compose.yml start",
+    "env:stop": "docker-compose -f ../docker-compose.yml stop"
   },
   "author": "",
   "license": "ISC",
