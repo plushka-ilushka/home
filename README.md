@@ -24,7 +24,18 @@ Please, take into account [this post](https://chris.beams.io/posts/git-commit/)
 
 // TODO
 
-## Installation guide  
+## Installation guide
 
-// TODO  
+Install and configure dependencies
+
+* [Amazon Corretto](https://docs.aws.amazon.com/corretto/latest/corretto-11-ug/downloads-list.html)
+* [Maven](https://maven.apache.org/download.cgi)
+* [Docker](https://www.docker.com/products/docker-desktop)
+* [Node.js](https://nodejs.org/en/)
+
+> Windows only:
+>
+> * Enable Hyper-V
+> * Enable Docker deamon (Docker\Settings\Expose deamon)
+> * Share current drive with Docker (Docker\Settings\Shared drives)
 
