@@ -8,4 +8,11 @@
   border: solid 1px #dfe2e6;
   background-color: $WHITE;
   outline: none;
+  padding-left: 45px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.input::placeholder {
+  color: $GRAY;
 }

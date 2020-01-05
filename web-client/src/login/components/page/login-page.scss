@@ -1,0 +1,53 @@
+@import "../../../assets/colors.scss";
+@import "../../../assets/fonts.scss";
+
+.login-page {
+  display: grid;
+  grid-template-columns: minmax(730px, 55%) minmax(710px, 45%);
+  align-items: center;
+
+  &__form-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 0 auto;
+  }
+
+  &__image-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  &__primary-text {
+    text-transform: uppercase;
+    height: 20px;
+    font-size: 14px;
+    color: #474a59;
+  }
+
+  &__secondary-text {
+    height: 25px;
+    color: #252529;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    &__link {
+      color: $GREEN;
+      text-decoration: none;
+    }
+  }
+
+  &__image-container {
+    position: relative;
+
+    &__image {
+      object-fit: cover;
+      height: 100vh;
+      min-width: 710px;
+      width: 100%;
+    }
+  }
+}
