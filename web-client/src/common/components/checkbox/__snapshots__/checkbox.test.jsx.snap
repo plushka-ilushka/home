@@ -10,6 +10,7 @@ exports[`Checkbox Component Checkbox Snapshot 1`] = `
     <label
       className="label checkbox"
     >
+      <div />
       <Input
         className="checkbox__input"
         type="checkbox"

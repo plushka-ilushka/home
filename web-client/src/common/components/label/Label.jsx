@@ -8,10 +8,17 @@ export default function Label(props) {
   const {
     className,
     children,
+    name,
+    caption,
+    captionClassName,
   } = props;
 
   return (
-    <label className={classNames('label', className)}>
+    <label
+      className={classNames('label', className)}
+      htmlFor={name}
+    >
+      <div className={captionClassName}>{caption}</div>
       {children}
     </label>
   );
@@ -20,8 +27,14 @@ export default function Label(props) {
 Label.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
+  name: PropTypes.string,
+  caption: PropTypes.string,
+  captionClassName: PropTypes.string,
 };
 
 Label.defaultProps = {
   className: undefined,
+  name: undefined,
+  caption: undefined,
+  captionClassName: undefined,
 };

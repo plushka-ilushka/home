@@ -6,7 +6,6 @@ import INPUT_TYPES from './constants';
 
 import './input.scss';
 
-
 export default function Input(props) {
   const {
     className,

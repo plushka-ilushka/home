@@ -29,13 +29,10 @@ module.exports = {
         query: {},
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'url-loader',
-            options: {
-              limit: 10000,
-            },
+            loader: 'file-loader',
           },
         ],
       },
