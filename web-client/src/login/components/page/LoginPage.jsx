@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 import { INPUT_TYPES } from '../../../common/components/input';
 import PrimaryButton from '../../../common/components/buttons/primary-button/PrimaryButton';
@@ -15,12 +15,19 @@ import background from '../../../assets/images/background.jpg';
 
 import './login-page.scss';
 
+export default function LoginPage(props) {
+  const {
+    // onSubmit,
+    // value1,
+    // value2,
+    // onChange1,
+    // onChange2,
+  } = props;
 
-export default function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-page__form-container">
-        <form className="login-page__form-content">
+        <form className="login-page__form-content" onSubmit={onSubmit}>
           <div className="login-page__logo-container">
             <p className="login-page__primary-text">Advance to your personal way of buying</p>
             <h1 className="login-page__secondary-text">Login your account</h1>
@@ -34,6 +41,8 @@ export default function LoginPage() {
               placeholder="Your E-Mail"
               caption="Email"
               htmlFor="Email"
+              value={value1}
+              onChange={onChange1}
             />
           </div>
           <div>
@@ -47,6 +56,8 @@ export default function LoginPage() {
               placeholder="Your Password"
               caption="Password"
               htmlFor="Password"
+              value={value2}
+              onChange={onChange2}
             />
           </div>
           <div className="login-page__block">
@@ -65,4 +76,4 @@ export default function LoginPage() {
       </div>
     </div>
   );
-}
+} */

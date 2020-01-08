@@ -21,6 +21,8 @@ export default function LoginInput(props) {
     glyph2,
     viewBox1,
     viewBox2,
+    value,
+    onChange,
   } = props;
 
   return (
@@ -40,6 +42,8 @@ export default function LoginInput(props) {
         name={name}
         type={type}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         required
       />
       <Icon
@@ -61,6 +65,8 @@ LoginInput.propTypes = {
   glyph2: PropTypes.string,
   viewBox1: PropTypes.string,
   viewBox2: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 LoginInput.defaultProps = {
@@ -73,4 +79,6 @@ LoginInput.defaultProps = {
   glyph2: undefined,
   viewBox1: undefined,
   viewBox2: undefined,
+  value: undefined,
+  onChange: undefined,
 };
