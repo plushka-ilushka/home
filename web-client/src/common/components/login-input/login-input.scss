@@ -9,13 +9,10 @@
     position: absolute;
     margin-top: 12px;
     z-index: 2;
-
-    &:first-child {
-      left: 15px;
-    }
+    left: 15px;
 
     &:last-child {
-      right: 15px;
+      left: 315px;
       cursor: pointer;
     }
   }

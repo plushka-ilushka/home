@@ -29,18 +29,11 @@ export default function LoginInput(props) {
       captionClassName="login-input__label"
       caption={caption}
     >
-      <div>
-        <Icon
-          glyph={glyph1}
-          viewBox={viewBox1}
-          className="login-input__icon"
-        />
-        <Icon
-          glyph={glyph2}
-          viewBox={viewBox2}
-          className={classNames('login-input__icon', className)}
-        />
-      </div>
+      <Icon
+        glyph={glyph1}
+        viewBox={viewBox1}
+        className="login-input__icon"
+      />
       <Input
         className={className}
         id={name}
@@ -48,6 +41,11 @@ export default function LoginInput(props) {
         type={type}
         placeholder={placeholder}
         required
+      />
+      <Icon
+        glyph={glyph2}
+        viewBox={viewBox2}
+        className="login-input__icon"
       />
     </Label>
   );
