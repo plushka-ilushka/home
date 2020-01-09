@@ -1,4 +1,4 @@
-/* import React, { Component } from 'react';
+import React, { Component } from 'react';
 
 import LoginPage from '../page/LoginPage';
 
@@ -7,33 +7,76 @@ export default class LoginContainer extends Component {
     super(props);
 
     this.state = {
-      //email: '',
-      //password: '',
+      email: '',
+      password: '',
+      RememberMe: false,
     };
 
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.handleRememberMeChange = this.handleRememberMeChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    const RememberMe = localStorage.getItem('RememberMe') === 'true';
+    const email = RememberMe ? localStorage.getItem('email') : '';
+    const password = RememberMe ? localStorage.getItem('password') : '';
+    this.setState({ email, password, RememberMe });
+  }
+
   handleEmailChange(event) {
-    // console.log('handleEmailChange', this);
     this.setState({
-      //email: event.target.value,
+      email: event.target.value,
     });
   }
 
   handlePasswordChange(event) {
-    // console.log('handlePasswordChange', this);
     this.setState({
-      //password: event.target.value,
+      password: event.target.value,
+    });
+  }
+
+  handleRememberMeChange(event) {
+    this.setState({
+      RememberMe: event.target.type === 'checkbox' ? event.target.checked : event.target.value,
     });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    // console.log('form submitted and email value is', this.state.email);
-    // console.log('form submitted and password value is', this.state.password);
+    const {
+      email,
+      password,
+      RememberMe,
+    } = this.state;
+
+    localStorage.setItem('RememberMe', RememberMe);
+    localStorage.setItem('email', RememberMe ? email : '');
+    localStorage.setItem('password', RememberMe ? password : '');
+
+    const apiBase = '/login?password=a&login=b';
+    fetch(apiBase, {
+      method: 'post',
+      body: JSON.stringify({
+        // email: this.state.email,
+        // password: this.state.password,
+      }),
+      headers: {
+        'content-type': 'application/json',
+      },
+    })
+      .then((res) => {
+        console.log(res.status);
+
+        if (!res.ok) {
+          alert('Ошибка авторизации!');
+          throw new Error(`Could not fetch ${apiBase}, received ${res.status}`);
+        }
+      })
+      .catch((error) => {
+        console.error(`Could not fetch${error}`);
+      });
   }
 
   render() {
@@ -44,7 +87,9 @@ export default class LoginContainer extends Component {
         onChange1={this.handleEmailChange}
         // value2={this.state.password}
         onChange2={this.handlePasswordChange}
+        // checked={this.state.RememberMe}
+        onChange3={this.handleRememberMeChange}
       />
     );
   }
-} */
+}
