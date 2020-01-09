@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -21,7 +21,13 @@ export default function LoginInput(props) {
     glyph2,
     viewBox1,
     viewBox2,
+    value,
+    onChange,
+    onMouseDown,
+    onMouseUp,
   } = props;
+
+  const [hidden, isHidden] = useState(type);
 
   return (
     <Label
@@ -38,14 +44,18 @@ export default function LoginInput(props) {
         className={className}
         id={name}
         name={name}
-        type={type}
+        type={hidden}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         required
       />
       <Icon
         glyph={glyph2}
         viewBox={viewBox2}
         className="login-input__icon"
+        onMouseDown={() => isHidden(onMouseDown)}
+        onMouseUp={() => isHidden(onMouseUp)}
       />
     </Label>
   );
@@ -61,6 +71,10 @@ LoginInput.propTypes = {
   glyph2: PropTypes.string,
   viewBox1: PropTypes.string,
   viewBox2: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  onMouseDown: PropTypes.string,
+  onMouseUp: PropTypes.string,
 };
 
 LoginInput.defaultProps = {
@@ -73,4 +87,8 @@ LoginInput.defaultProps = {
   glyph2: undefined,
   viewBox1: undefined,
   viewBox2: undefined,
+  value: undefined,
+  onChange: undefined,
+  onMouseDown: undefined,
+  onMouseUp: undefined,
 };

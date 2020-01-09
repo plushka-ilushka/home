@@ -7,35 +7,38 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'index-bundle.js',
   },
+  devServer: {
+    proxy: {
+      target: 'http://localhost:8080',
+      context: '/',
+    },
+  },
   module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader', 'source-map-loader'],
-        enforce: 'pre',
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-sprite-loader',
-        query: {},
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
-      },
+    rules: [{
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: ['babel-loader', 'source-map-loader'],
+      enforce: 'pre',
+    },
+    {
+      test: /\.s[ac]ss$/i,
+      use: [
+        'style-loader',
+        'css-loader',
+        'sass-loader',
+      ],
+    },
+    {
+      test: /\.svg$/,
+      loader: 'svg-sprite-loader',
+      query: {},
+    },
+    {
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [{
+        loader: 'file-loader',
+      }],
+    },
     ],
   },
   devtool: 'source-map',

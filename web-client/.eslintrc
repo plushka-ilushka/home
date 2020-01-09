@@ -58,7 +58,8 @@
       "allowLiteral": false,
       "allowObject": false
     }],
-    "no-console": "error",
+    "no-console": "off",
+    "no-alert": "off",
     "func-names": "error",
     "no-shadow": "warn",
     "max-len": "warn",

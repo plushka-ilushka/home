@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { INPUT_TYPES } from '../../../common/components/input';
 import PrimaryButton from '../../../common/components/buttons/primary-button/PrimaryButton';
@@ -13,14 +14,25 @@ import suche from '../../../assets/icons/suche.svg';
 import key from '../../../assets/icons/key.svg';
 import background from '../../../assets/images/background.jpg';
 
+import { postForm } from '../../../services/requests-form';
+
 import './login-page.scss';
 
+export default function LoginPage(props) {
+  const {
+    onSubmit,
+    value1,
+    value2,
+    onChange1,
+    onChange2,
+    onChange3,
+    checked,
+  } = props;
 
-export default function LoginPage() {
   return (
     <div className="login-page">
       <div className="login-page__form-container">
-        <form className="login-page__form-content">
+        <form className="login-page__form-content" onSubmit={onSubmit}>
           <div className="login-page__logo-container">
             <p className="login-page__primary-text">Advance to your personal way of buying</p>
             <h1 className="login-page__secondary-text">Login your account</h1>
@@ -34,6 +46,10 @@ export default function LoginPage() {
               placeholder="Your E-Mail"
               caption="Email"
               htmlFor="Email"
+              value={value1}
+              onChange={onChange1}
+              onMouseDown={INPUT_TYPES.EMAIL}
+              onMouseUp={INPUT_TYPES.EMAIL}
             />
           </div>
           <div>
@@ -47,14 +63,18 @@ export default function LoginPage() {
               placeholder="Your Password"
               caption="Password"
               htmlFor="Password"
+              value={value2}
+              onChange={onChange2}
+              onMouseDown={INPUT_TYPES.EMAIL}
+              onMouseUp={INPUT_TYPES.PASSWORD}
             />
           </div>
           <div className="login-page__block">
             <SecondaryButton caption="Register" type="submit" />
-            <PrimaryButton caption="Login" type="submit" />
+            <PrimaryButton caption="Login" type="submit" onClick={postForm} />
           </div>
           <div className="login-page__block">
-            <Checkbox caption="Remember me" />
+            <Checkbox caption="Remember me" name="RememberMe" checked={checked} onChange={onChange3} />
             <a href="test.com" className="login-page__block__link">Forgot password?</a>
           </div>
         </form>
@@ -66,3 +86,23 @@ export default function LoginPage() {
     </div>
   );
 }
+
+LoginPage.propTypes = {
+  onSubmit: PropTypes.func,
+  value1: PropTypes.string,
+  value2: PropTypes.string,
+  onChange1: PropTypes.func,
+  onChange2: PropTypes.func,
+  onChange3: PropTypes.func,
+  checked: PropTypes.bool,
+};
+
+LoginPage.defaultProps = {
+  onSubmit: undefined,
+  value1: undefined,
+  value2: undefined,
+  onChange1: undefined,
+  onChange2: undefined,
+  onChange3: undefined,
+  checked: undefined,
+};

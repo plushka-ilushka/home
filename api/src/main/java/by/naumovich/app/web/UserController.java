@@ -102,7 +102,7 @@ public class UserController extends ErrorHandlingController implements Initializ
             Credentials creds = new Credentials();
             // string123
             creds.setPassHash("0362795b2ee7235b3b4d28f0698a85366703eacf0ba4085796ffd980d7653337");
-            creds.setUserName("string");
+            creds.setUserName("string@mail.com");
             creds.setUserId(create.getId());
             service.save(creds);
         }
