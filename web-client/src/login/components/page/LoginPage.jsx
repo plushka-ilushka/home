@@ -1,5 +1,6 @@
-import React from 'react';
+/* import React from 'react';
 import PropTypes from 'prop-types';
+import { Redirect } from 'react-router';
 
 import { INPUT_TYPES } from '../../../common/components/input';
 import PrimaryButton from '../../../common/components/buttons/primary-button/PrimaryButton';
@@ -19,6 +20,9 @@ import { postForm } from '../../../services/requests-form';
 import './login-page.scss';
 
 export default function LoginPage(props) {
+  if (isLoggedIn) {
+    return <Redirect to="/" />;
+  }
   const {
     onSubmit,
     value1,
@@ -27,6 +31,8 @@ export default function LoginPage(props) {
     onChange2,
     onChange3,
     checked,
+    isLoggedIn,
+    onLogin,
   } = props;
 
   return (
@@ -71,10 +77,11 @@ export default function LoginPage(props) {
           </div>
           <div className="login-page__block">
             <SecondaryButton caption="Register" type="submit" />
-            <PrimaryButton caption="Login" type="submit" onClick={postForm} />
+            <PrimaryButton caption="Login" type="submit" onClick={postForm} onCkick={onLogin} />
           </div>
           <div className="login-page__block">
-            <Checkbox caption="Remember me" name="RememberMe" checked={checked} onChange={onChange3} />
+            <Checkbox caption="Remember me" name="RememberMe" checked={checked}
+            onChange={onChange3} />
             <a href="test.com" className="login-page__block__link">Forgot password?</a>
           </div>
         </form>
@@ -105,4 +112,4 @@ LoginPage.defaultProps = {
   onChange2: undefined,
   onChange3: undefined,
   checked: undefined,
-};
+}; */

@@ -9,9 +9,22 @@ import './app.scss';
 export default function App() {
   return (
     <Router>
-      <Route exact path="/" render={() => <h2>Welcome</h2>} />
-      <Route path="/dashboard" component={Dashboard} />
-      <Route path="/login" component={LoginPage} />
+      <Route exact path="/" render={() => <h1>Welcome to the club, body</h1>} />
+      <Route
+        path="/login"
+        render={() => (
+          <LoginPage
+            isLoggedIn={false}
+            onLogin={() => {}}
+          />
+        )}
+      />
+
+      <Route
+        path="/dashboard"
+        render={() => (
+          <Dashboard isLoggedIn={false} />)}
+      />
     </Router>
   );
 }

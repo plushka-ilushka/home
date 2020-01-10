@@ -8,9 +8,10 @@ module.exports = {
     filename: 'index-bundle.js',
   },
   devServer: {
+    historyApiFallback: true,
     proxy: {
       target: 'http://localhost:8080',
-      context: '/',
+      context: '/api',
     },
   },
   module: {
@@ -45,7 +46,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      favicon: 'favicon.ico',
+      favicon: './favicon.ico',
     }),
   ],
   resolve: {

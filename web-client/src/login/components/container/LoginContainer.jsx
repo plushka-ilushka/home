@@ -55,7 +55,7 @@ export default class LoginContainer extends Component {
     localStorage.setItem('email', RememberMe ? email : '');
     localStorage.setItem('password', RememberMe ? password : '');
 
-    const apiBase = `/login?password=${password}&userName=${email}`;
+    const apiBase = `/api/login?password=${password}&userName=${email}`;
     fetch(apiBase, {
       method: 'post',
       body: JSON.stringify({
