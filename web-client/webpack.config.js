@@ -8,9 +8,10 @@ module.exports = {
     filename: 'index-bundle.js',
   },
   devServer: {
+    historyApiFallback: true,
     proxy: {
       target: 'http://localhost:8080',
-      context: '/',
+      context: '/api',
     },
   },
   module: {
@@ -34,7 +35,7 @@ module.exports = {
       query: {},
     },
     {
-      test: /\.(png|jpe?g|gif)$/i,
+      test: /\.(png|jpe?g|gif|ico)$/i,
       use: [{
         loader: 'file-loader',
       }],
@@ -45,6 +46,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      favicon: './favicon.ico',
     }),
   ],
   resolve: {
